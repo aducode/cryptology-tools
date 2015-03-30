@@ -104,13 +104,20 @@ if __name__ == '__main__':
 				key = int(sys.argv[4])
 			except:
 				pass
-		if not key:
+		if key is None:
 			key = autocomp(infile)
 			print 'try the key:',key
-		with open(infile) as f_input:
-			with open(outfile,'w') as o_file:
-				for line in f_input:
-					o_file.write(globals()[op](line, key))
+		if key>0:
+			with open(infile) as f_input:
+				with open(outfile,'w') as o_file:
+					for line in f_input:
+						o_file.write(globals()[op](line, key))
+		else:
+			for k in xrange(1,26):
+				with open(infile) as f_input:
+					with open('%s%d'%(outfile,k),'w') as o_file:
+						for line in f_input:
+							o_file.write(globals()[op](line, k))
 	else:
 		print_usage()
 		sys.exit(1)
