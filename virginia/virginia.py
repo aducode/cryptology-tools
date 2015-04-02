@@ -23,6 +23,7 @@ def validate(alpha):
 def encode(plaintext, key):
 	if not key or not plaintext:
 		return plaintext
+	key=''.join(key.split())
 	key_idx = 0
 	ret=[]
 	for alpha in plaintext:
@@ -43,6 +44,7 @@ def encode(plaintext, key):
 	return ''.join(ret)
 
 def decode(ciphertext, key):
+	key=''.join(key.split())
 	if not key or not ciphertext:
 		return ciphertext
 	key_idx = 0
