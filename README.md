@@ -13,3 +13,8 @@
   Usage:
 
 	1. python bitseq2bin.py bitseqstrfile outdatabinfile
+
+* virginia: 维尼吉亚密码
+
+  Usage:
+  	1. python virginia.py encode|decode key in out
