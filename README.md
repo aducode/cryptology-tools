@@ -12,4 +12,4 @@
   
   Usage:
 
-	python bitseq2bin.py bitseqstrfile outdatabinfile
+	* python bitseq2bin.py bitseqstrfile outdatabinfile
