@@ -11,4 +11,5 @@
 * bitseq2bin: 将0/1组成的字符串序列转换成二进制文件
   
   Usage:
+
 	python bitseq2bin.py bitseqstrfile outdatabinfile
